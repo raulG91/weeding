@@ -58,6 +58,16 @@ body {
       text-align: left;
     }
   }
+/* Styles for sections */
+
+.container{
+
+  display: flex;
+  justify-content: center;
+}
+
+
+/*Styles for footer */  
 footer{
 
     background: black;
