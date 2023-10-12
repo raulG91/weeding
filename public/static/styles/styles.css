@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-size: 100%;
     line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Open Sans" , Helvetica, sans-serif;
 
 }
 /* Styles for user bar */
@@ -63,7 +63,16 @@ body {
 .container{
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.container > spam {
+ text-justify: auto;
+}
+.map{
+  width: 100%;
+  height: 400px;
+  margin-top: 10px;
 }
 
 
@@ -77,7 +86,7 @@ footer{
     height: 50px;
     display: flex;
     column-gap: 10px;
-    justify-content: center;
+    align-items:end;
 
 }
 footer > div > a, span {
