@@ -39,7 +39,7 @@ body {
 .icon2>span {
 	font-size: 20px;
 	margin: auto;
-	background: #46a4da;
+	background: #04AA6D;
 	border-radius: 50px;
 	width: 50px;
 	height: 50px;
@@ -60,6 +60,9 @@ body {
 .info {
 	margin-bottom: 3%;
 }
+.info:hover{
+  background-color: #ddd;
+}
 
 @media (min-width: 600px) {
 	.info, .custom {
@@ -79,6 +82,10 @@ body {
 .topnav {
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
   }
   
   .topnav a {
@@ -128,15 +135,62 @@ body {
   }
 /* Styles for sections */
 
+section{
+
+  margin-top: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/*Init section will have different styles*/
+.ini_section{
+  margin-top: 50px;
+  background: url(../images/background_2.jpg) no-repeat;
+  width: 100%;
+  height: 600px;
+}
+
+
+@media screen and  (min-width: 500px) {
+.ini_section{
+
+  margin-top: 50px;
+  background: url(../images/background_2.jpg);
+  height: 700px;
+  width: 100%;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+}
+/*In case mobile device, use a diffrent background image */
+
+@media screen and  (max-width: 480px) {
+  .ini_section{
+    margin-top: 50px;
+    background: url(../images/background_3.jpg) no-repeat;
+    height: 300px;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+}
+.ini_title{
+
+  color: white;
+}
+
 .container{
 
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.container > spam {
- text-justify: auto;
+
+.container > p{
+  hyphens: auto;
 }
+
 .map{
   width: 100%;
   height: 400px;
@@ -144,17 +198,27 @@ body {
 }
 
 
+/*Make image smaller when running on mobile */
+@media screen and (max-width: 600px) {
+  .image_insta{
+    width: 300px;
+  }
+  
+  
+}
+
 /*Styles for footer */  
 footer{
 
-    background: black;
-    position:absolute;
+    background: #333;
     bottom:0;
     width: 100%;
     height: 50px;
     display: flex;
-    column-gap: 10px;
-    align-items:end;
+    flex-direction: row;
+    column-gap: 5px;
+    justify-content:center;
+    margin-top: auto;
 
 }
 footer > div > a, span {

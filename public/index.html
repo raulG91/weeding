@@ -16,7 +16,9 @@
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLJHea1U0NXqKs6_VvxGl8nkZ8Hwc-0ZE&callback=initMap&libraries=&v=weekly"
     defer></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
 </head>
 
@@ -27,13 +29,15 @@
     <a href="#celebration">Celebración</a>
     <a href="#where">¿Donde?</a>
     <a href="#register">Registrate!</a>
+    <a href="#share">Share!</a>
     <a href="javascript:void(0);" class="icon" onclick="click_icon()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
-  <section id="intro">
+  <section id="intro"  class="ini_section">
     <div class="container">
-      <h1>RAÚL Y MARÍA JESÚS</h1>
+      <h1 class="ini_title">Raul y Maria Jesús</h1>
+      
     </div>
   </section>
 
@@ -41,32 +45,89 @@
   <section id="meet">
     <div class="container">
       <h2>Como comenzó todo </h2>
-      <spam>
+      <p>
         Finalizando el verano del año 2014, nos reunimos por casualidad.
-
-      </spam>
+      </p>
 
     </div>
   </section>
 
-      <section id="celebration">
-        <div class="container">
-        <h2>Celebracion</h2>
+  <section id="celebration">
+    <div class="container">
+      <h2>Evento </h2>
+      <p>Estos son los horarios para el día 13 abril de 2024</p>
+
+    </div>
+    <div class="container_timeline">
+
+      <div class="timeline">
+        <div class="custom"></div>
+        <div class="icon2">
+          <span><i class="fa fa-star"></i></span>
+        </div>
+        <div class="info">
+          <h3>12:12 Ceremonia</h3>
+          <p>La ceremonia civil se realizará en el Hotel Restaurante El Capricho, Villanueva del Trabuco. Oficiará la
+            ceremonia Chacón</p>
+        </div>
+      </div>
+      <div class="timeline box-right">
+        <div class="custom"></div>
+        <div class="icon2">
+          <span><i class="fa fa-star"></i></span>
+        </div>
+        <div class="info">
+          <h3>13:13 Copa de bienvenida</h3>
+          <p>Tras la ceremonia empezará el cóctel de bienvinida. Se servirán aperitivos y refrescos para hacer mas amena
+            la espera</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="custom"></div>
+        <div class="icon2">
+          <span><i class="fa fa-star"></i></span>
+        </div>
+        <div class="info">
+          <h3>14:00 Almuerzo</h3>
+          <p>Tras el aperitivo pasaramos el salón principal</p>
+        </div>
+      </div>
+      <div class="timeline box-right">
+        <div class="custom"></div>
+        <div class="icon2">
+          <span><i class="fa fa-star"></i></span>
+        </div>
+        <div class="info">
+          <h3>18:00 barra libre</h3>
+          <p>Inicio de la barra libre amanecida por un Dj. Habrá fotocall, spiro videobooth, atrezzo. </p>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="custom"></div>
+        <div class="icon2">
+          <span><i class="fa fa-star"></i></span>
+        </div>
+        <div class="info">
+          <h3>21:30 Cena</h3>
+          <p>Para poder continuar baliando habrá una cena que incluirá bocadillos, perritos calientes etc</p>
+        </div>
+      </div>
+
+    </div>
 
 
-          </div>
-      </section>
+  </section>
 
   <section id="where">
     <div class="container">
       <h2>¿Como llego alli?</h2>
-      <spam>
+      <p>
         Es más fácil de lo que piensas. Puedes usar google maps para obtener la ubicacion exacta usando
         el siguiente link <a
           href="https://www.google.com/maps/search/?api=1&query=37.06764602661133%2C-4.326528072357178"
           target="_blank">Google maps</a>.
-        Tambien habrá servicio de autobus que efecturá su salida desde Loja, ¡No olvides indicarlo en tu reserva!
-      </spam>
+      </p>
+      <p>Tambien habrá servicio de autobus que efecturá su salida desde Loja, ¡No olvides indicarlo en tu reserva!</p>
       <div id="map" class="map">
 
 
@@ -79,23 +140,33 @@
   <section id="register">
     <div class="container">
       <h2>Contamos contigo!</h2>
+      <!-- Form  -->
+    </div>
+  </section>
+  <section id="share">
+    <div class="container">
+      <h2>Share</h2>
+     <p>Comparte tu fotos usando #BodaMariaRaul</p>
+     <img class="image_insta" src="static/images/instagram.png"/>
+    </div>
+  </section>
+ 
+  <footer>
+    <div id="links">
+      <span>Creado por Raul Garcia </span>
+    </div>
+    <div id="linkedin">
+      <a href="https://www.linkedin.com/in/raul-garcia-pedrosa-35a014118/" target="_blank"><i
+          class="fa-brands fa-linkedin"></i>Linkedin</a>
+    </div>
+    <div id="github">      
+      <a href="https://github.com/raulG91" target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
+    </div>
+    <div id="contacto">
+      <a href="">Contacto</a>
+    </div>
+  </footer>
 
-
-        </div>
-      </section>
-
-    <footer>
-        <div id="links">
-          <span>Creado por Raul Garcia </span>
-        </div>
-        <div id="social">
-            <a href="https://www.linkedin.com/in/raul-garcia-pedrosa-35a014118/" target="_blank"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
-            <a href="https://github.com/raulG91" target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
-        </div>
-        <div id="contacto">
-            <a href="">Contacto</a>
-        </div>
-    </footer>
 </body>
 
 </html>
