@@ -143,20 +143,14 @@ section{
 }
 
 /*Init section will have different styles*/
-.ini_section{
-  margin-top: 50px;
-  background: url(../images/background_2.jpg) no-repeat;
-  width: 100%;
-  height: 600px;
-}
 
-
-@media screen and  (min-width: 500px) {
+@media screen and  (min-width: 500px) and  (max-width : 1600px) {
 .ini_section{
 
   margin-top: 50px;
-  background: url(../images/background_2.jpg);
-  height: 700px;
+  background: no-repeat  url(../images/background_2.jpg);
+  background-size:  cover;
+  height: 815px;
   width: 100%;
   margin-left: 0px;
   margin-right: 0px;
@@ -224,4 +218,13 @@ footer{
 footer > div > a, span {
     color: white;
 
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+
+    column-gap: 2px;
+  }
+  
+  
 }
