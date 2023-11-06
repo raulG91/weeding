@@ -2,6 +2,9 @@ from flask import current_app
 import googleapiclient.discovery
 from google.oauth2 import service_account
 from datetime import datetime
+from flask_mail import Message,Mail
+
+
 
 class Model:
     def __init__(self) -> None:
@@ -41,4 +44,16 @@ class Model:
         }
         result = sheet.values().append(spreadsheetId=spreadsheet_id,
                                         range=range_name,body = object,insertDataOption= "INSERT_ROWS",valueInputOption="USER_ENTERED").execute()
-        print(name + " " + last_name +" "+ phone + " "+ number + " " + number + " " + child_menu + " "+ alergies + bus)
+        
+
+    def send_mail(self,name,last_name,email,message):
+        email_object = Mail(current_app)
+        email_object.connect()
+        msg = Message(subject="Hola",
+              sender="bodamariaraul105@gmail.com",
+              recipients=["rgarciapedrosa@gmail.com"])
+        msg.body = 'Bienvenid@ a j2logo'
+        msg.html = '<p>Bienvenid@ a <strong>j2logo</strong></p>'
+        email_object.send(msg)
+        print("Sent")
+     

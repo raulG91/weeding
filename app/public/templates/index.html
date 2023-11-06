@@ -161,6 +161,15 @@
     <div class="container">
       <h2>Contamos contigo!</h2>
       <p>Confirma tu asistencia antes del 15 de Febrero 2024</p>
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class=flashes>
+        {% for message in messages %}
+          <span>{{ message }}</span>
+        {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
       <!-- Form  -->
       <form action="" method="post" enctype="multipart/form-data" >
         <div class="form">
@@ -262,7 +271,7 @@
       <a href="https://github.com/raulG91" target="_blank"><i class="fa-brands fa-square-github"></i>GitHub</a>
     </div>
     <div id="contacto">
-      <a href="">Contacto</a>
+      <a href="{{url_for("public.contact")}}" target="_blank">Contacto</a>
     </div>
     </footer>
 

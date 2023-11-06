@@ -29,7 +29,6 @@ function initMap() {
 function set_countdown() {
 
   var countDownDate = new Date("Apr 13, 2024 12:12:00").getTime();
-
   // Update the count down every 1 second
   var x = setInterval(function () {
 
@@ -60,7 +59,10 @@ function set_countdown() {
     // If the count down is over, write some text 
     if (distance < 0) {
       clearInterval(x);
-      document.getElementById("countdown").innerHTML = "EXPIRED";
+      document.getElementById("days").innerText = 0;
+      document.getElementById("hours").innerText = 0;
+      document.getElementById("minutes").innerText = 0;
+      document.getElementById("seconds").innerText = 0;
     }
   }, 1000);
 }

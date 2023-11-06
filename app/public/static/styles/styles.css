@@ -409,6 +409,16 @@ input[type="submit" i] {
 input[type="submit" i]:hover {
   opacity: 0.8;
 }
+.flashes{
+
+  background:#04AA6D;
+  border: #04AA6D 2px solid;
+  border-radius: 4px;
+  padding: 16px;
+  z-index: 2;
+
+}
+
 /*Styles for footer */
 footer {
 

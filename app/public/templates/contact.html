@@ -1,0 +1,79 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Weeding, Raul & Maria, Boda">
+        <meta name="description" content="Boda María & Raul">
+        <meta name="author" content="Raul Garcia">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Boda Maria & Raul</title>
+        <link rel="stylesheet" href="{{ url_for("public.static",filename="/styles/styles.css" ) }}">
+        <link rel="shortcut icon" href="{{ url_for("public.static",filename="images/logo.png" ) }}" />
+        <script src="https://kit.fontawesome.com/55cc5c8e5d.js" crossorigin="anonymous"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLJHea1U0NXqKs6_VvxGl8nkZ8Hwc-0ZE&callback=initMap&libraries=&v=weekly"
+          defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <script src="{{ url_for("public.static",filename="/javascript/myscript.js" ) }}">
+        </script>
+        <script>set_countdown()</script>
+      </head>
+
+<body>
+    <div class="container">
+        <form action="" method="post" enctype="multipart/form-data">
+            <div class="form">
+                {{ form.hidden_tag() }}
+                {% for error in form.form_errors %}
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+            
+                <div class="grid_form">
+                    {{ form.name.label }}<br>
+                    {{ form.name(size=40) }}
+                    {% for error in form.name.errors %}
+                    <br>
+                    <span style="color: red;">{{ error }}</span>
+                    {% endfor %}
+              </div>
+              <div class="grid_form">
+                {{ form.last_name.label }}<br>
+                {{ form.last_name(size=40) }}
+                {% for error in form.last_name.errors %}
+                <br>
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+              </div>
+              <div class="grid_form">
+                {{ form.email.label }}<br>
+                {{ form.email(size=40) }}
+                {% for error in form.email.errors %}
+                <br>
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+              </div>                
+              <div class="grid_form">
+                {{ form.message.label }}<br>
+                {{ form.message(size=255) }}
+                {% for error in form.message.errors %}
+                <br>
+                <span style="color: red;">{{ error }}</span>
+                {% endfor %}
+              </div>       
+              <div class="form_button">
+                {{ form.submit}}
+    
+              </div>       
+            </div>  
+        </form>
+
+    </div>
+</body>
+
+
+</html>
