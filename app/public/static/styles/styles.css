@@ -1,6 +1,7 @@
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -161,8 +162,8 @@ body {
 section {
 
   margin-top: 20px;
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 /*Init section will have different styles*/
@@ -171,7 +172,7 @@ section {
   .ini_section {
 
     margin-top: 50px;
-    background: no-repeat url(../images/background_2.jpg);
+    background: url(../images/background_2.jpg) no-repeat;
     background-size: cover;
     height: 815px;
     width: 100%;
@@ -184,8 +185,6 @@ section {
     color: white;
     font-family: 'Lobster', sans-serif;
     font-size: 400%;
-
-
   }
 }
 
@@ -195,7 +194,7 @@ section {
   .ini_section {
 
     margin-top: 50px;
-    background: no-repeat center url(../images/background_2.jpg);
+    background: url(../images/background_2.jpg) no-repeat center;
     height: 815px;
     width: 100%;
     margin-left: 0px;
@@ -230,17 +229,15 @@ section {
     color: white;
     font-family: 'Lobster', sans-serif;
     font-size: 300%;
-
-
   }
-
 }
 
 @media screen and (max-width: 480px) {
   .ini_section {
     margin-top: 50px;
-    background: url(../images/background_3.jpg) no-repeat;
-    height: 300px;
+    background: url(../images/background_3_0.jpg)  no-repeat;
+    background-size: cover;
+    height: 250px;
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -251,9 +248,7 @@ section {
     color: white;
     font-family: 'Lobster', sans-serif;
     font-size: 200%;
-
   }
-
 }
 
 /*Standard container for sections */
@@ -273,7 +268,9 @@ section {
   text-decoration: 1px solid underline #333;
   text-underline-position: under;
   text-underline-offset: 5px;
+  
 }
+
 
 .map {
   width: 100%;
@@ -319,11 +316,21 @@ section {
 
 @media screen and (max-width: 600px) {
   .countdown>ul>li {
-    font-size: calc(1.125rem * var(--smaller));
+    font-size: calc(1.2rem * var(--smaller));
   }
 
   .countdown>ul>li>span {
-    font-size: calc(2.00rem * var(--smaller));
+    font-size: calc(2rem * var(--smaller));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .countdown>ul>li {
+    font-size: calc(1.05rem * var(--smaller));
+  }
+
+  .countdown>ul>li>span {
+    font-size: calc(1.5rem * var(--smaller));
   }
 }
 
@@ -357,11 +364,13 @@ section {
 
 @media screen and (max-width: 480px) {
   .description_row_photo {
-    background: url(../images/family_v1.jpg) no-repeat;
+    background: url(../images/family_v0.jpg) no-repeat;
     width: 100%;
-    height: 440px;
+    background-size: cover;
+    height: 290px;
   }
 }
+
 
 @media screen and (min-width: 480px) and (max-width : 900px) {
   .description_row_photo {
@@ -371,13 +380,25 @@ section {
     background-size: cover;
   }
 }
-@media screen and (min-width: 900px) {
+
+@media screen and (min-width: 900px) and (max-width : 1600px) {
   .description_row_photo {
     background: url(../images/family_v3.jpg) no-repeat;
     width: 100%;
     height: 850px;
-    background-size: cover;
+    background-size: cover
+    ;
   }
+}
+@media screen and (min-width: 1600px) {
+  .description_row_photo {
+    background: url(../images/family_v3.jpg) no-repeat center;
+    /*width: 100%;*/
+    height: 850px;
+    /*background-size: cover*/
+    ;
+  }
+
 }
 
 
@@ -387,6 +408,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
 
 
 }
@@ -395,56 +417,7 @@ section {
   padding: 3px;
 }
 
-/*
-.form{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  align-content: center;
-  width:100%;
-}
 
-.grid_form{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
-  column-gap: 2px;
-  justify-items: left;
-}
-.grid_form>label{
-  width: 100%;
-  text-align: right;
-}
-.grid_form>input{
-  width: 100%;
-  
-
-}
-/*In case small screen condense the form into one column*/
-/*
-@media screen and (max-width: 600px) {
-  .form{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    align-content: center;
-    width:100%;
-  }
-  .grid_form>label{
-    width: 100%;
-    text-align: left;
-    
-  }
-  .grid_form>input{
-
-  
-  }
-  .grid_form{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap:2px;
-  }
-}*/
 /*Styles for submit button */
 .form_button {
 
@@ -505,6 +478,17 @@ span {
 
     column-gap: 2px;
   }
+}
 
+@media screen and (max-width: 480px) {
+  footer {
 
+    column-gap: 1px;
+  }
+
+  footer>div>a,
+  span {
+    font-size: 4vw;
+
+  }
 }
