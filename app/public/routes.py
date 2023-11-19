@@ -24,7 +24,6 @@ def index():
         form.number.data = 0
         form.child_menu.data = 0
         return redirect(url_for('public.index'))
-        #return render_template("index.html",form = form)  
     else:
         return render_template("index.html",form = form)  
 
@@ -35,9 +34,11 @@ def contact():
         name = form.name.data
         last_name = form.last_name.data
         email = form.email.data
+        phone = form.phone.data
         message = form.message.data
         my_model = Model()
-        my_model.send_mail(name,last_name,email,message)
+        my_model.send_mail(name,last_name,email,phone,message)
+        flash("Se ha enviado su mensaje")
         return redirect(url_for('public.contact'))
     else:
        return render_template("contact.html",form = form)  

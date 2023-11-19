@@ -16,5 +16,6 @@ class ContactForm(FlaskForm):
    name = StringField('Nombre *',validators=[DataRequired(message="Nombre es obligatorio"),Length(max=40)],description="Nombre")
    last_name =  StringField('Apellido *', validators=[DataRequired(), Length(max=40)],description="Apellido")
    email = StringField('Email *', validators=[Email(message="Email incorrecto"),Optional()],description="Email")
+   phone = StringField('Telefono *', validators=[DataRequired(),Regexp('^[67]\d{8}$',message="Numero no valido")],description="Telefono")
    message = TextAreaField('Mensaje', validators=[DataRequired(),Length(max=255)])
    submit = SubmitField('Enviar')
