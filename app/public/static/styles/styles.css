@@ -393,7 +393,7 @@ section {
 @media screen and (min-width: 1600px) {
   .description_row_photo {
     background: url(../images/family_v3.jpg) no-repeat center;
-    /*width: 100%;*/
+    width: 100%;
     height: 850px;
     /*background-size: cover*/
     ;
