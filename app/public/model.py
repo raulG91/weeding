@@ -9,7 +9,7 @@ class Model:
     def __init__(self) -> None:
         pass
     def get_credentials(self):
-        SCOPES = ['https://www.googleapis.com/auth/gmail.send']
+        SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
         GOOGLE_PRIVATE_KEY = current_app.config.get('GOOGLE_PRIVATE_KEY')
     
         account_info = {
